@@ -1,0 +1,27 @@
+{
+  "name": "thermostat-smartapp",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "functions-framework --source ./index.js --target index",
+    "deploy": "gcloud functions deploy st-handler --project dual-thermostat-smartapp --runtime nodejs10 --entry-point index --trigger-http --allow-unauthenticated --set-env-vars NODE_ENV=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfishel18/thermostat-smartapp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfishel18/thermostat-smartapp/issues"
+  },
+  "homepage": "https://github.com/sfishel18/thermostat-smartapp#readme",
+  "dependencies": {
+    "@smartthings/smartapp": "^2.5.0"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^1.7.1"
+  }
+}
